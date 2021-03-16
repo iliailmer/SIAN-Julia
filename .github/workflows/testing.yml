@@ -20,7 +20,7 @@ jobs:
       - name: "Checkout"
         uses: actions/checkout@v2
       - name: "Setup Julia"
-        uses: julia-actions/setup-julia@latest
+        uses: julia-actions/setup-julia@v1
         with:
           version: ${{ matrix.julia-version }}
           arch: ${{ matrix.julia-arch }}
