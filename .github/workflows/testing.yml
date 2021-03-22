@@ -13,9 +13,7 @@ jobs:
         julia-version: ['1.5.3']
         julia-arch: [x64]
         os: [macos-latest, ubuntu-latest]
-        #exclude:
-          #- os: macOS-latest
-            #julia-arch: x86
+
     steps:
       - name: "Checkout"
         uses: actions/checkout@v2
@@ -27,4 +25,5 @@ jobs:
       - name: "Build Package"
         uses: julia-actions/julia-buildpkg@latest
       - name: "Run tests"
-        uses: julia-actions/julia-runtest@latest
+        run: julia test/runtests.jl
+        # uses: julia-actions/julia-runtest@latest
