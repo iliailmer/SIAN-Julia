@@ -108,9 +108,9 @@ version = "0.20.1+7"
 
 [[GroebnerBasis]]
 deps = ["BinaryProvider", "Dates", "GMP_jll", "Hecke", "LibGit2", "Libdl", "Nemo", "Singular", "SparseArrays", "StaticArrays", "gb_jll"]
-git-tree-sha1 = "d0126114e525ec2fad2d4b93e03acabdd49f01f6"
+git-tree-sha1 = "ef7f679db7ef49d5a607eb27bb69900fa191d36d"
 uuid = "e39c9192-ea4d-5e15-9584-a488c6d614bd"
-version = "0.3.1"
+version = "0.3.2"
 
 [[Hecke]]
 deps = ["AbstractAlgebra", "Dates", "Distributed", "InteractiveUtils", "Libdl", "LinearAlgebra", "Markdown", "Nemo", "Pkg", "Printf", "Profile", "Random", "RandomExtensions", "Requires", "Serialization", "SparseArrays", "Test"]
@@ -245,9 +245,9 @@ version = "1.2.0+1"
 
 [[Parsers]]
 deps = ["Dates"]
-git-tree-sha1 = "223a825cccef2228f3fdbf2ecc7ca93363059073"
+git-tree-sha1 = "c8abc88faa3f7a3950832ac5d6e690881590d6dc"
 uuid = "69de0a69-1ddd-5017-9359-2bf0b02dc9f0"
-version = "1.0.16"
+version = "1.1.0"
 
 [[Perl_jll]]
 deps = ["Artifacts", "JLLWrappers", "Libdl", "Pkg", "Readline_jll"]

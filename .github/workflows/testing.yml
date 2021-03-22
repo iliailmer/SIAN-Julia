@@ -24,17 +24,10 @@ jobs:
           arch: ${{ matrix.julia-arch }} 
       - name: "Build Package"
         uses: julia-actions/julia-buildpkg@v1
-        with: 
-          version: ${{ matrix.julia-version }}
-          arch: ${{ matrix.julia-arch }} 
       - name: "Check Load Path"
         run: julia -E "LOAD_PATH"
       - name: "Check Load Path from Base"
         run: julia -E "Base.load_path()"
       - name: "Run tests"
-        # run: julia test/runtests.jl
         uses: julia-actions/julia-runtest@v1
-        with:
-          version: ${{ matrix.julia-version }}
-          arch: ${{ matrix.julia-arch }}
 
