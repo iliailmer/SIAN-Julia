@@ -30,7 +30,7 @@ jobs:
       - name: "Check Load Path"
         run: julia -E "LOAD_PATH"
       - name: "Check Load Path from Base"
-             julia -E "Base.load_path()"
+        run: julia -E "Base.load_path()"
       - name: "Run tests"
         # run: julia test/runtests.jl
         uses: julia-actions/julia-runtest@v1
