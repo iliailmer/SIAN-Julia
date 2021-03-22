@@ -24,7 +24,7 @@ jobs:
           arch: ${{ matrix.julia-arch }} 
       - name: "Check Load Path"
         run: julia -E "LOAD_PATH"
-        run: julia -E "Base.load_path()"
+             julia -E "Base.load_path()"
       - name: "Build Package"
         uses: julia-actions/julia-buildpkg@v1
         with: 
