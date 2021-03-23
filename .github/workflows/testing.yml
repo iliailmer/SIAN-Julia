@@ -1,6 +1,10 @@
 name: "SIAN Tests for Julia"
 on:
+  pull_request:
   push:
+    branches:
+      - main
+      - develop
     paths-ignore:
     - 'README.md'
     - 'Dockerfile'
@@ -10,8 +14,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        julia-version: ['1.5.3']
-        julia-arch: [x64]
+        julia-version: ["1.5.3"]
+        julia-arch: [x64, x86]
         os: [macos-latest, ubuntu-latest]
 
     steps:
