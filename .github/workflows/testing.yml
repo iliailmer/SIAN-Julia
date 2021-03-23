@@ -25,10 +25,10 @@ jobs:
           arch: ${{ matrix.julia-arch }} 
       - name: "Build Package"
         uses: julia-actions/julia-buildpkg@v1
-      - name: "Check Load Path"
-        run: julia -E "LOAD_PATH"
-      - name: "Check Load Path from Base"
-        run: julia -E "Base.load_path()"
+      # - name: "Check Load Path"
+      #   run: julia -E "LOAD_PATH"
+      # - name: "Check Load Path from Base"
+      #   run: julia -E "Base.load_path()"
       - name: "Run tests"
         uses: julia-actions/julia-runtest@v1
 
