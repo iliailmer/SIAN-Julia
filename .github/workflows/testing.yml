@@ -22,7 +22,7 @@ jobs:
         uses: julia-actions/setup-julia@v1
         with:
           version: ${{ matrix.julia-version }}
-          arch: ${{ matrix.julia-arch }} 
+          # arch: ${{ matrix.julia-arch }} 
       - name: "Build Package"
         uses: julia-actions/julia-buildpkg@v1
       # - name: "Check Load Path"
