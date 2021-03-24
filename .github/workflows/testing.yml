@@ -29,6 +29,7 @@ jobs:
       #   run: julia -E "LOAD_PATH"
       # - name: "Check Load Path from Base"
       #   run: julia -E "Base.load_path()"
-      # - name: "Run tests"
+      - name: "Run tests"
+        run: julia --color=yes --check-bounds=yes --inline=yes --depwarn=yes --project=@. -e 'using Pkg; Pkg.test(coverage=true)'
         # uses: julia-actions/julia-runtest@v1
 
