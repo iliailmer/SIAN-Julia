@@ -23,10 +23,8 @@ jobs:
         with:
           version: ${{ matrix.julia-version }}
           arch: ${{ matrix.julia-arch }} 
-      - name: "pwd"
-        run: pwd && ls -la
       - name: "Build and Test"
-        run: julia -e 'using Pkg; Pkg.build("SIAN"); Pkg.test("SIAN");'
+        run: julia -e 'using Pkg; Pkg.activate("."); Pkg.build("SIAN"); Pkg.test("SIAN");'
       # - name: "Build Package"
       #   uses: julia-actions/julia-buildpkg@v1
       # - name: "Run tests"
