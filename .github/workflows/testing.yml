@@ -13,7 +13,7 @@ jobs:
       matrix:
         julia-version: ["1.5.3"]
         julia-arch: [x64]
-        os: [macos-latest]
+        os: [macos-latest, ubuntu-latest]
 
     steps:
       - name: "Checkout"
@@ -22,14 +22,11 @@ jobs:
         uses: julia-actions/setup-julia@v1
         with:
           version: ${{ matrix.julia-version }}
-          # arch: ${{ matrix.julia-arch }} 
-      - name: "Build Package"
-        uses: julia-actions/julia-buildpkg@v1
-      # - name: "Check Load Path"
-      #   run: julia -E "LOAD_PATH"
-      # - name: "Check Load Path from Base"
-      #   run: julia -E "Base.load_path()"
-      - name: "Run tests"
-        run: julia --color=yes --check-bounds=yes --inline=yes --depwarn=yes --project=@. -e 'using Pkg; Pkg.test(coverage=true)'
+          arch: ${{ matrix.julia-arch }} 
+      - name: "Build and Test"
+        run: julia -e 'using Pkg; Pkg.build("GroebnerBasis"); Pkg.test("GroebnerBasis");'
+      # - name: "Build Package"
+      #   uses: julia-actions/julia-buildpkg@v1
+      # - name: "Run tests"
         # uses: julia-actions/julia-runtest@v1
 
